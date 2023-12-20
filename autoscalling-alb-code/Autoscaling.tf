@@ -1,8 +1,8 @@
 resource "aws_autoscaling_group" "asg-1" {
   name              = "project1-asg"
   max_size          = 3
-  min_size          = 1
-  desired_capacity  = 1
+  min_size          = 2
+  desired_capacity  = 2
   target_group_arns = [aws_lb_target_group.tg-home.arn]
 
   launch_template {
@@ -17,8 +17,8 @@ resource "aws_autoscaling_group" "asg-1" {
 resource "aws_autoscaling_group" "asg-2" {
   name              = "project2-asg"
   max_size          = 3
-  min_size          = 1
-  desired_capacity  = 1
+  min_size          = 2
+  desired_capacity  = 2
   target_group_arns = [aws_lb_target_group.tg-mobile.arn]
 
   launch_template {
@@ -33,8 +33,8 @@ resource "aws_autoscaling_group" "asg-2" {
 resource "aws_autoscaling_group" "asg-3" {
   name              = "project3-asg"
   max_size          = 3
-  min_size          = 1
-  desired_capacity  = 1
+  min_size          = 2
+  desired_capacity  = 2
   target_group_arns = [aws_lb_target_group.tg-laptop.arn]
 
   launch_template {

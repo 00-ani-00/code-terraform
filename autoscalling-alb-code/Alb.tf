@@ -34,7 +34,7 @@ resource "aws_lb_listener" "listner" {
 #     }
 #   }
 # }
-resource "aws_lb_listener_rule" "rule-2" {
+resource "aws_lb_listener_rule" "rule-1" {
   listener_arn = aws_lb_listener.listner.arn
   priority     = 101
 
@@ -48,7 +48,7 @@ resource "aws_lb_listener_rule" "rule-2" {
     }
   }
 }
-resource "aws_lb_listener_rule" "rule-3" {
+resource "aws_lb_listener_rule" "rule-2" {
   listener_arn = aws_lb_listener.listner.arn
   priority     = 102
 
