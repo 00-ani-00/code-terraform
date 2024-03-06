@@ -3,6 +3,10 @@ resource "aws_lb_target_group" "tg-home" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc.id
+
+  health_check {
+    path      = "/"
+}
 }
 
 resource "aws_lb_target_group" "tg-mobile" {
@@ -10,6 +14,10 @@ resource "aws_lb_target_group" "tg-mobile" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc.id
+
+  health_check {
+    path      = "/mobile/"
+}
 }
 
 resource "aws_lb_target_group" "tg-laptop" {
@@ -17,4 +25,8 @@ resource "aws_lb_target_group" "tg-laptop" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc.id
+
+  health_check {
+    path      = "/laptop/"
+  }
 }
