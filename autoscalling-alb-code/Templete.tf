@@ -1,8 +1,8 @@
 resource "aws_launch_template" "LT-1" {
   name                   = "my-LT-1"
-  image_id               = "ami-02cad064a29d4550c"
+  image_id               = "ami-0fc3317b37c1269d3"
   instance_type          = "t2.micro"
-  key_name               = "ASG-key"
+  key_name               = "ireland-key"
   vpc_security_group_ids = [aws_security_group.sg.id]
   user_data = base64encode(
     <<-EOF
@@ -24,9 +24,9 @@ EOF
 
 resource "aws_launch_template" "LT-2" {
   name                   = "my-LT-2"
-  image_id               = "ami-02cad064a29d4550c"
+  image_id               = "ami-0fc3317b37c1269d3"
   instance_type          = "t2.micro"
-  key_name               = "ASG-key"
+  key_name               = "ireland-key"
   vpc_security_group_ids = [aws_security_group.sg.id]
   user_data = base64encode(
     <<-EOF
@@ -49,9 +49,9 @@ EOF
 
 resource "aws_launch_template" "LT-3" {
   name                   = "my-LT-3"
-  image_id               = "ami-02cad064a29d4550c"
+  image_id               = "ami-0fc3317b37c1269d3"
   instance_type          = "t2.micro"
-  key_name               = "ASG-key"
+  key_name               = "ireland-key"
   vpc_security_group_ids = [aws_security_group.sg.id]
   user_data = base64encode(
     <<-EOF
