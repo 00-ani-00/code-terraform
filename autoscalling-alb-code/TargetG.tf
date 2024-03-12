@@ -5,8 +5,8 @@ resource "aws_lb_target_group" "tg-home" {
   vpc_id   = aws_vpc.vpc.id
 
   health_check {
-    path      = "/"
-}
+    path = "/"
+  }
 }
 
 resource "aws_lb_target_group" "tg-mobile" {
@@ -16,8 +16,8 @@ resource "aws_lb_target_group" "tg-mobile" {
   vpc_id   = aws_vpc.vpc.id
 
   health_check {
-    path      = "/mobile/"
-}
+    path = "/mobile/"
+  }
 }
 
 resource "aws_lb_target_group" "tg-laptop" {
@@ -27,6 +27,6 @@ resource "aws_lb_target_group" "tg-laptop" {
   vpc_id   = aws_vpc.vpc.id
 
   health_check {
-    path      = "/laptop/"
+    path = "/laptop/"
   }
 }
